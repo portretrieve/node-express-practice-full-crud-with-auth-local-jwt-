@@ -1,0 +1,27 @@
+<h1>Clothing List</h1>
+
+<div class="row">
+    <div class="col">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Repeating Row -->
+                <% for (let i = 0; i < clothingList.length; i++) { %>
+                    <tr>
+                        <th scope="row">
+                            <%= count+1 %>
+                        </th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+    </div>
+</div>

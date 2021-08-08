@@ -1,0 +1,21 @@
+<h1 class="container text-center">Edit Page</h1>
+<hr>
+
+<div class="row justify-content-lg-center g-3">
+    <h1>
+        <%= title%>Clothing</h1>
+    <form action="POST" class="col-lg-6 col-md-10 col-sm-10">
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="name">Name</span>
+            <input id="name" type="text" class="form-control" placeholder="name" aria-label="Name" aria-describedby="Item Name" name="name" value=<%=clothingItemToEdit.name%> required>
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="price">Price</span>
+            <input id="price" type="text" class="form-control" placeholder="price" aria-label="Price" aria-describedby="Item Price" name="price" value=<%=clothingItemToEdit.price%> required>
+        </div>
+
+    </form>
+
+</div>

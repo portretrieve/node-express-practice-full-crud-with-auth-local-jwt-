@@ -1,0 +1,11 @@
+/* Custom CSS goes here */
+
+.bottom {
+    background-color: black !important;
+    color: rgb(230, 223, 223)
+}
+
+h6 {
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
