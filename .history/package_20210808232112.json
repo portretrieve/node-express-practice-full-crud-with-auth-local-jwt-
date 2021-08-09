@@ -39,7 +39,6 @@
         "@types/morgan": "^1.9.3",
         "@types/passport": "^1.0.7",
         "@types/passport-local": "^1.0.34",
-        "@types/passport-local-mongoose": "^4.0.13"
-
+        "@types/passport-local-mongoose": "^4.0.15"
     }
 }

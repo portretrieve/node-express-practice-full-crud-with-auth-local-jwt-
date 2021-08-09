@@ -28,6 +28,8 @@ const path_1 = __importDefault(require("path"));
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const morgan_1 = __importDefault(require("morgan"));
 const mongoose_1 = __importDefault(require("mongoose"));
+const passport_local_1 = __importDefault(require("passport-local"));
+let localStrategy = passport_local_1.default.Strategy;
 const DBConfig = __importStar(require("./db"));
 mongoose_1.default.connect(DBConfig.localURI, { useNewUrlParser: true, 'useUnifiedTopology': true });
 mongoose_1.default.connection.on("error", console.error.bind(console, "console error"));

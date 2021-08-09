@@ -8,10 +8,9 @@ import mongoose from "mongoose"
 //Modules for authentication
 import session from "express-session";
 import passport from "passport";
-import passportLocal from "passport-local";
+import passportLocal from "passport-local"
 
-// Authentication objects
-let localStrategy = passportLocal.Strategy;
+
 
 
 import * as DBConfig from "./db";
