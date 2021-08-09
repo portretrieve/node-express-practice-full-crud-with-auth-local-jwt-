@@ -3,10 +3,7 @@ import express from "express";
 import path from "path";
 import cookieParser from "cookie-parser";
 import logger from "morgan";
-import mongoose from "mongoose";
-
-// modules for cors
-import cors from 'cors';
+import mongoose from "mongoose"
 
 //Modules for authentication
 import session from "express-session";
@@ -15,10 +12,6 @@ import passportLocal from "passport-local";
 
 // Authentication objects
 let localStrategy = passportLocal.Strategy;
-import User from '../Models/user';
-
-// module for auth messaging and error management
-import flash from 'connect-flash';
 
 
 import * as DBConfig from "./db";
@@ -43,31 +36,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "../../Client")));
 app.use(express.static(path.join(__dirname, "../../node_modules")));
-
-// add support for cors
-app.use(cors());
-
-// initialize flash
-app.use(flash());
-
-// initialize passport
-app.use(passport.initialize());
-app.use(passport.session());
-
-// implement an Auth Strategy
-passport.use(User.createStrategy());
-
-// serialize and deserialize user data
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
-
-// setup express session
-app.use(session({
-  secret: DBConfig.Secret,
-  saveUninitialized: false,
-  resave: false
-}));
-
 
 app.use("/", indexRouter);
 app.use("/clothing-list", clothingRouter);
