@@ -19,9 +19,9 @@ router.post('/edit/:id', ProcessEditPage);
 /* GET - process /clothing-list/delete/:id */
 router.get('/delete/:id', ProcessDeletePage);
 
+//TODO
 
- 
- 
- 
- 
+
+
+
 export default router;
